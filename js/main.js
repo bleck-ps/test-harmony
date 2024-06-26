@@ -1,0 +1,1 @@
+const herologo = document.getElementById('herologo');

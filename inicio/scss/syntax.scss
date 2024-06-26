@@ -1,0 +1,318 @@
+$naranja: #c6821e;
+@font-face {
+    font-family: Montserrat-bold;
+    src: url(../../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-regular;
+    src: url(../../fonts/Montserrat-Regular.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+}
+nav {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 10;
+    @media screen and (max-width: 1000px) {
+        width: 60px;
+        height: 60px;
+    }
+    .imgnav {
+        width: 100%;
+        height: 100%;
+        svg {
+            width: 100%;
+            max-height: 100%;
+            filter: drop-shadow(2px 2px 5px #000);
+        }
+    }
+}
+
+.back {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    overflow: hidden;
+    z-index: -2;
+    .imgback {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -2;
+    }
+    .shadowback {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        background: linear-gradient(180deg, #000 7%, rgba(0,0,0,0.6) 60%, #000 100%);
+    }
+}
+
+.master {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+    .logocont {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 1000px) {
+            width: auto;
+            height: 10%;
+        }
+        img {
+            width: 80%;
+            @media screen and (max-width: 1000px) {
+                width: auto;
+                height: 80%;
+            }
+        }
+    }
+    .formcont {
+        width: 50%;
+        height: 80%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 40px;
+        backdrop-filter: blur(10px);
+        padding: 0px;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        overflow-y: hidden;
+        @media screen and (max-width: 1000px) {
+            width: 80%;
+            height: 70%;
+        }
+        .formriel {
+            width: 200%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        
+            .formbox {
+                width: 100%;
+                padding: 40px 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 60px;
+                    font-family: Montserrat-bold;
+                    color: #fff;
+                    padding: 0px 40px;
+                    @media screen and (max-width: 1100px) {
+                        font-size: 40px;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        font-size: 30px;
+                    }
+                }
+                .h2title {
+                    font-size: 40px;
+                    @media screen and (max-width: 1100px) {
+                        font-size: 30px;
+                    }
+                    @media screen and (max-width: 1000px) {
+                        font-size: 20px;
+                    }
+                }
+                form {
+                    margin-top: 40px;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    
+                    input {
+                        width: 70%;
+                        height: 50px;
+                        border-radius: 30px;
+                        background: #fff0d9;
+                        color: #898989;
+                        font-size: 20px;
+                        text-align:left ;
+                        padding-left: 30px;
+                        font-family: Montserrat-bold;
+                        border: none;
+                        @media screen and (max-width: 1300px) {
+                            width: 100%;
+                            padding-left: 20px;
+                        }
+                        @media screen and (max-width: 1600px) {
+                            font-size: 15px;
+                        }
+                        @media screen and (max-width: 1000px) {
+                            height: 35px;
+                            padding-left: 10px;
+                            font-size: 12px;
+                        }
+                    }
+                    input:focus {
+                        border: 2px solid #c6821e;
+                        outline: none;
+                        
+                    }
+                    .cincuenta {
+                        width: calc(35% - 5px);
+                        @media screen and (max-width: 1300px) {
+                            width: calc(50% - 5px);
+                        }
+                    }
+                    .submit {
+                        width: 40%;
+                        background: #ffba5f;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 0px;
+                        font-size: 30px;
+                        margin-top: 40px;
+                        transition: 500ms ease;
+                        @media screen and (max-width: 1300px) {
+                            margin-top: 20px;
+                            font-size: 20px;
+                        }
+                    }
+                    .submit:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+                    .formalert {
+                        color: #ff7070;
+                        text-shadow: 0px 0px 4px #000000;
+                        margin-top: 0px;
+                        display: none;
+                        width: 100%;
+                        padding: 0px 40px;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                    .check {
+                        width: 70%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        color: #fff;
+                        font-family: Montserrat-regular;
+                        font-size: 13px;
+                        @media screen and (max-width: 1000px) {
+                            font-size: 10px;
+                        }
+                        a {
+                            color: #ffba5f;
+                        }
+                        a:hover {
+                            cursor: pointer;
+                        } 
+                        .checkb {
+                            width: 20px;
+                            height: 20px;
+                            background: #9f691a;
+                            border: none;
+                            
+                        }
+                    }
+                    a {
+                        width: 100%;
+                        text-align: center;
+                        font-family: Montserrat-regular;
+                        color: #d1d1d1;
+                        text-decoration: none;
+                        b {
+                            color: #ffba5f;
+                        }
+                    }
+                }
+                p {
+                    margin-top: 30px;
+                    font-family: Montserrat-regular;
+                    color: #d1d1d1;
+                    @media screen and (max-width: 1000px) {
+                        font-size: 10px;
+                    }
+                    .t-amarillo {
+                        color: #ffba5f ;
+                    }
+                }
+                p:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.privcont {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 110;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .privshadow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur(10px);
+    }
+    .privbox {
+        width: 50%;
+        height: 80%;
+        background: #fff;
+        z-index: 111;
+        position: absolute;
+        border-radius: 40px;
+        padding: 40px;
+        overflow-y: scroll;
+        .privinbox {
+            width: 100%;
+            height: auto;
+            p {
+                font-size: 17px;
+                font-family: Montserrat-regular;
+                b {
+                    font-size: 20px;
+                    font-family: Montserrat-bold;
+                    color: #9f691a;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+  }

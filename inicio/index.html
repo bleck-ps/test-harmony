@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="scss/syntax.css">
+</head>
+<body>
+    <nav>
+        <div class="imgnav" id="navbtn" onclick="cambiarinicio()">
+            <svg height="512" viewBox="0 0 48 48" width="512" xmlns="http://www.w3.org/2000/svg" id="fi_3249390"><g id="Line"><path fill="#fff" d="m32 44.24a5.25 5.25 0 0 0 3.71-9l-11.3-11.24 11.3-11.29a5.25 5.25 0 0 0 -7.42-7.42l-18 18a1 1 0 0 0 0 1.42l18 18a5.26 5.26 0 0 0 3.71 1.53z"></path></g></svg>
+        </div>
+    </nav>
+
+    <div class="back">
+        <div class="imgback">
+            <img src="img/back.png" alt="">
+        </div>
+        <div class="shadowback"></div>
+    </div>
+
+    <div class="master">
+        <div class="logocont">
+            <img src="../img/Logo_Harmony.svg" alt="">
+        </div>
+        <div class="formcont" id="formriel">
+            <div class="formriel">
+                <div class="formbox logi">
+                    <h2>Inicia sesión</h2>
+                    <form action="">
+                        <input type="text" name="logmail" id="mail" placeholder="E-Mail">
+                        <input type="password" name="logpassword" id="password" placeholder="Contraseña">
+                        <a href="">Olvidaste tu <b>contraseña?</b></a>
+                        <input type="submit" value="Enviar" class="submit">
+                    </form>
+                    <p id="toregibtn">Aún no tienes una cuenta? <b class="t-amarillo">Registrate</b></p>
+                </div> 
+                <div class="formbox regi">
+                    <h2 class="h2title">Registrate para Agendar una cita</h2>
+                    <form action="">
+                        <input type="text" name="regnombre" required id="nombre" placeholder="Nombre">
+                        <input type="text" class="cincuenta nombretxt" required name="regapp" id="app" placeholder="Apellido Paterno">
+                        <input type="text" class="cincuenta nombretxt" required name="regapm" id="apm" placeholder="Apellido Materno">
+                        <p class="formalert" id="nombrealert">No se permiten caracteres especiales</p>
+                        <input type="text" name="regmail" id="mailreg" required placeholder="E-Mail">
+                        <p class="formalert" id="mailalert">Correo no valido</p>
+                        <input type="number" maxlength="10" name="regtelefono" required id="telefono" placeholder="Teléfono">
+                        <p class="formalert" id="telalert">Teléfono no valido</p>
+                        <input type="password" class="cincuenta" name="regpassword" required id="regpassword" placeholder="Contraseña">
+                        <input type="password" class="cincuenta" name="regpasswordconfirm" required id="passwordconfirm" placeholder="Confirmar contraseña">
+                        <p class="formalert" id="passalert">Contraseña no valida, debe contener al menos una mayuscula y un numero, y debe tener una extensión minima de 8 caracteres</p>
+                        <p class="formalert" id="passeqalert">Contraseñas no coinciden</p>
+                        <div class="check">
+                            <input type="checkbox" class="checkb" name="suscribir" id="suscribir">
+                        <label for="suscribir">Suscribirse a nuetro Boletín para recibir las mejores notas de cuidado personal (opcional)</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class="checkb" name="condiciones" id="condiciones">
+                        <label for="condiciones">Acepto las <a id="privbtn">condiciones de privacidad de Harmony</a></label>
+                        </div>
+                        <p class="formalert" id="passeqalert">Debes aceptar las condiciones para usar la plataforma</p>
+                        <input type="submit" value="Enviar" class="submit" id="regisubmit">
+                    </form>
+                    <p id="tologibtn">Ya tienes una cuenta? <b class="t-amarillo">Inicia sesión</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="privcont" id="privcont">
+        <div class="privshadow" id="privshadow"></div>
+        <div class="privbox">
+            <div class="privinbox">
+                <p>
+                    Harmony te informa sobre su Política de Privacidad respecto al tratamiento y protección de los datos de carácter personal de los usuarios y clientes que puedan ser recabados durante la navegación o al utilizar nuestros servicios. <br><br>
+
+<b>1.-Recopilación de Datos Personales:</b> <br>
+Al registrarte en nuestro spa o utilizar nuestros servicios, recopilaremos información como tu nombre, dirección de correo electrónico, número de teléfono y preferencias personales. <br>
+Estos datos se utilizarán exclusivamente para mejorar tu experiencia de usuario, agendar citas y enviarte boletines informativos relevantes. <br><br>
+
+<b>2.-Uso de Datos Personales:</b> <br>
+Utilizaremos tus datos personales para: <br>
+Agendar y confirmar citas. <br>
+Enviarte recordatorios y notificaciones relacionadas con tus reservas. <br>
+Enviarte boletines informativos sobre promociones, eventos y novedades del spa. <br>
+Personalizar tu experiencia en nuestro sitio web y aplicación. <br><br>
+
+<b>3.-Confidencialidad y Seguridad:</b> <br>
+Garantizamos la confidencialidad y seguridad de tus datos personales. <br>
+No compartiremos tu información con terceros sin tu consentimiento expreso. <br><br>
+
+<b>4.-Derechos del Usuario:</b> <br>
+Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales. <br>
+Puedes ejercer estos derechos enviando un correo electrónico a contacto@harmonyspa.mx <br><br>
+
+<b>5.-Cambios en la Política de Privacidad:</b> <br>
+Nos reservamos el derecho de modificar esta política en cualquier momento. Te notificaremos sobre cualquier cambio relevante. <br><br>
+
+Al aceptar nuestra política de privacidad, estás de acuerdo con el tratamiento de tus datos personales según lo descrito anteriormente
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
